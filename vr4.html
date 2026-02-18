@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR1</title>
+      <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+<style>
+     
+     
+     #button1{
+            position: absolute;
+            top:20px;
+            left:30px;
+            background:rgba(0,0,0,0.4);
+            color: rgba(255,255,255,0.6);
+            border-radius: 10px;
+            border:none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 100;
+     }
+     #button1:hover{
+        position: absolute;
+        background:red;
+        color: rgba(255,255,255,0.6);
+
+     }
+     /* 簡單提示 */
+        .info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: rgba(250, 246, 8, 0.88);
+            background: rgba(0,0,0,0.4);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 100;
+            pointer-events: none;
+        }
+    
+</style>
+</head>
+<body>
+   
+<a href="main.html"><button id="button1">back to main</button></a>
+ <a-scene>
+        <a-camera look-controls="magicWindowTrackingEnabled:false;touchEnabled=true;mouseEnabled=true;"></a-camera>
+          <a-sky src="R0010529.JPG" rotation="0 -90 0"></a-sky>
+    </a-scene>
+
+<div class="info">👆| 支援VR模式 (可用手指或滑鼠拖曳觀看)</div>
+</body>
+</html>
