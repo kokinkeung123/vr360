@@ -24,19 +24,38 @@
     #button:hover{
          background-color: lightblue;
         color:yellow;
+        box-shadow: 2px 2px 2px black ;
+         transform: translateX(5px);
+         transition:0.5s;
     }
 
     </style>
     
 </head>
 <body>
-    <marquee id="header"><h3>VR 360 Image Selector</h3></marquee>
+    <marquee id="header"><h2>VR 360 Image Selector</h2></marquee>
     <a href="vr1.html"><button type="button" id="button">VR SCENE-1</button></a>
     <a href="vr2.html"><button type="button" id="button">VR SCENE-2</button></a>
     <a href="vr3.html"><button type="button" id="button">VR SCENE-1</button></a>
     <a href="vr4.html"><button type="button" id="button">VR SCENE-2</button></a>
     <a href="vr5.html"><button type="button" id="button">VR SCENE-1</button></a>
     <a href="vr6.html"><button type="button" id="button">VR SCENE-2</button></a>
+
+  <script>
+   function changeColor(){
+   const colors = ["red","blue","pink","green","lightblue","orange","#ff00ff","#abff2f","#ff1493","#9400d3","#800000","#da70d6","#db7093"];
+   const randomIndex = Math.floor(Math.random() * colors.length);
+   const textDisp = document.getElementById("header");
+
+ 
+    textDisp.style.color = colors[randomIndex];
+    //textDisp.style.color = "red";
+   }
+
+   setInterval(changeColor, 700)
+
+</script>
+  
 
 </body>
 </html>
